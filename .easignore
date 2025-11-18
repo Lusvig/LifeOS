@@ -1,0 +1,9 @@
+# Ignore desktop app
+apps/desktop
+
+# Ignore root node_modules (will use workspace resolution)
+node_modules/.cache
+
+# Keep mobile app and shared packages
+!apps/mobile
+!packages

@@ -47,6 +47,17 @@ lerna-debug.log*
 
 # Expo
 /apps/mobile/.expo/
+/apps/mobile/dist/
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+
+# EAS
+.eas.env
 
 # OS
 .DS_Store
