@@ -56,6 +56,34 @@ pnpm build
 cd apps/desktop && pnpm build
 ```
 
+### EAS Build & Deploy (Mobile)
+
+This monorepo is configured to work with Expo Application Services (EAS). The mobile app lives in `apps/mobile` directory.
+
+```bash
+# Login to EAS (first time only)
+npx eas login
+
+# Configure your EAS project (first time only - run from mobile directory)
+cd apps/mobile && npx eas build:configure
+
+# Build for development (run from root with working-dir flag)
+npx eas build --profile development --platform android
+
+# Build for production
+npx eas build --profile production --platform all
+
+# Submit to app stores
+npx eas submit --platform android
+npx eas submit --platform ios
+```
+
+**Monorepo Configuration**: 
+- The root `eas.json` contains build profiles
+- The mobile app configuration is in `apps/mobile/app.json`
+- The root `package.json` includes `react-native` as a devDependency to satisfy EAS import requirements
+- Update the `projectId` in `apps/mobile/app.json` under `extra.eas.projectId` with your actual EAS project ID after initial setup
+
 ## Features
 
 ### Desktop App

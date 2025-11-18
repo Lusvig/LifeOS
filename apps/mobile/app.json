@@ -16,13 +16,15 @@
       "**/*"
     ],
     "ios": {
-      "supportsTabletMode": true
+      "supportsTabletMode": true,
+      "bundleIdentifier": "com.lifeos.app"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#09090b"
-      }
+      },
+      "package": "com.lifeos.app"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -34,6 +36,11 @@
           "cameraPermission": "Allow LifeOS to access your camera"
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "your-project-id-here"
+      }
+    }
   }
 }
